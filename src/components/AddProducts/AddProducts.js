@@ -10,6 +10,8 @@ const AddProducts = () => {
     const onSubmit = data => {
         const eventData={
             name:data.name,
+            price:data.price,
+            weight:data.weight,
             imageURL:imageURL
         };
         const url=`http://localhost:8080/addProduct`;
@@ -42,8 +44,14 @@ const AddProducts = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input name="name" defaultValue="test" ref={register} />
+            <input name="name" defaultValue="name" ref={register} />
+            <br/>
+            <input name="price" defaultValue="Enter price" ref={register} />
+            <br/>
+            <input name="weight" defaultValue="Enter Weight" ref={register} />
+            <br/>
             <input name="exampleRequired" type="file" onChange={handleImageUpload} />
+            <br/>
             {errors.exampleRequired && <span>This field is required</span>}
             <input type="submit" />
         </form>
