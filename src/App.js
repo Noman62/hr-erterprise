@@ -10,19 +10,23 @@ import Login from "./components/Login/Login";
 import ManageProduct from "./components/ManageProduct/ManageProduct";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./components/Home/Home";
+import CheckOut from "./components/CheckOut/CheckOut";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <Home/>
+          <Home />
         </Route>
         <Route path="/admin">
           <AddProducts />
         </Route>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/checkOut/:productId">
+          <CheckOut />
         </Route>
         <Route path="/manageProduct">
           <ManageProduct />

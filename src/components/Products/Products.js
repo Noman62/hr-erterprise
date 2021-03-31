@@ -1,7 +1,12 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 const Products = (props) => {
-    const { name, imageURL } = props.product;
+    const { name, imageURL,_id } = props.product;
+    let history=useHistory();
+    const handleProduct=(productId)=>{
+        history.push(`/checkOut/${productId}`);
+    }
     return (
         <div class="card mt-3" style={{ width: '18rem', marginLeft: '20px', backgroundColor: '#FFFFFF' }}>
             <img style={{ height: '400px' }} src={imageURL} alt="" />
@@ -10,10 +15,10 @@ const Products = (props) => {
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                        <h5>{name}</h5>
+                        <p>{name}</p>
                          </div>
                         <div class="col">
-                        <button type="button" class="btn btn-info">BUY NOW..</button>
+                        <button type="button" onClick={()=>handleProduct(_id)} class="btn btn-info">BUY NOW..</button>
                         </div>
                     </div>
 
