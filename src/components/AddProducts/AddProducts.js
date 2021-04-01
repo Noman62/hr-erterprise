@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
+import './AddProduct.css';
 
 const AddProducts = () => {
     const { register, handleSubmit, watch, errors } = useForm();
@@ -8,21 +10,22 @@ const AddProducts = () => {
 
 
     const onSubmit = data => {
-        const eventData={
-            name:data.name,
-            price:data.price,
-            weight:data.weight,
-            imageURL:imageURL
+        const eventData = {
+            name: data.name,
+            price: data.price,
+            weight: data.weight,
+            imageURL: imageURL
         };
-        const url=`http://localhost:8080/addProduct`;
-        fetch(url,{
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
+
+        const url = `http://localhost:8080/addProduct`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
             },
-            body:JSON.stringify(eventData)
+            body: JSON.stringify(eventData)
         })
-        .then(res=>console.log('server side response'))
+            .then(res => console.log('server side response'))
         console.log(eventData);
     };
 
@@ -43,18 +46,29 @@ const AddProducts = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <input name="name" defaultValue="name" ref={register} />
-            <br/>
-            <input name="price" defaultValue="Enter price" ref={register} />
-            <br/>
-            <input name="weight" defaultValue="Enter Weight" ref={register} />
-            <br/>
-            <input name="exampleRequired" type="file" onChange={handleImageUpload} />
-            <br/>
-            {errors.exampleRequired && <span>This field is required</span>}
-            <input type="submit" />
-        </form>
+
+        <div>
+            <div class="sidenav">
+                <Link class="nav-link text-white" aria-current="page" to="/manageProduct">Manage Product</Link>
+                <Link class="nav-link text-white" aria-current="page" to="/admin">Add Product</Link>
+                <Link class="nav-link text-white" aria-current="page" to="/edit">Edit Product</Link>
+            </div>
+
+            <div class="main">
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <input name="name" defaultValue="name" ref={register} />
+                    <br />
+                    <input name="price" defaultValue="Enter price" ref={register} />
+                    <br />
+                    <input name="weight" defaultValue="Enter Weight" ref={register} />
+                    <br />
+                    <input name="exampleRequired" type="file" onChange={handleImageUpload} />
+                    <br />
+                    {errors.exampleRequired && <span>This field is required</span>}
+                    <input type="submit" />
+                </form>
+            </div>
+        </div>
     );
 };
 

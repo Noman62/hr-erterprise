@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import Products from '../Products/Products';
 import { Container, Grid, makeStyles } from "@material-ui/core";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyle = makeStyles((theme) => ({
     root: {
@@ -29,6 +30,9 @@ const Home = () => {
           <main className={classes.root} style={{backgroundColor:'#FFFFFF' }} >
           <Container className={classes.containerRoot} maxWidth="md" >
               <Grid container spacing={3} justify="center">
+                  {
+                     products.length===0 &&    <CircularProgress />
+                  }
                   {
                       products.map(product=><Products id={product._id} product={product}></Products>)
                   }
