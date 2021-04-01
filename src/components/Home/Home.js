@@ -30,7 +30,7 @@ const Home = () => {
           <Container className={classes.containerRoot} maxWidth="md" >
               <Grid container spacing={3} justify="center">
                   {
-                      products.map(product=><Products product={product}></Products>)
+                      products.map(product=><Products id={product._id} product={product}></Products>)
                   }
               </Grid>
           </Container>

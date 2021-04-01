@@ -13,6 +13,8 @@ const CheckOut = () => {
     return (
         <div>
             <h5>{product.name}</h5>
+            <p>{product.price}</p>
+            
          
         </div>
     );
