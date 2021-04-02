@@ -19,14 +19,14 @@ const Home = () => {
     const [products, setProducts] = useState([]);
     const classes = useStyle();
     useEffect(() => {
-        fetch('http://localhost:8080/products')
+        fetch('https://safe-gorge-00308.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
     return (
         <div>
             <Header/>
-            <main className={classes.root} style={{ backgroundColor: '#FFFFFF' }} >
+            <main className={classes.root} style={{ backgroundColor: '#5cdb95' }} >
                 <Container className={classes.containerRoot} maxWidth="md" >
                     <Grid container spacing={3} justify="center">
                         {

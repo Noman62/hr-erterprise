@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory'
 
 
 const ManageProduct = () => {
     const [manageProduct, setManageProduct] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:8080/products')
+        fetch('https://safe-gorge-00308.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setManageProduct(data))
     }, [])
+  
+   
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:8080/delete/${id}`, {
+        fetch(`https://safe-gorge-00308.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(result => {
                 if (result) {
-
+                    const history = createHistory();
+                    history.go(0)
                 }
             })
 
@@ -28,7 +32,7 @@ const ManageProduct = () => {
             <div class="sidenav">
                 <Link class="nav-link text-white" aria-current="page" to="/manageProduct">Manage Product</Link>
                 <Link class="nav-link text-white" aria-current="page" to="/admin">Add Product</Link>
-                <Link class="nav-link text-white" aria-current="page" to="/edit">Edit Product</Link>
+                <Link class="nav-link text-white" aria-current="page" to="/home">Home</Link>
             </div>
 
             <div class="main">

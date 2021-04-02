@@ -17,7 +17,7 @@ const AddProducts = () => {
             imageURL: imageURL
         };
 
-        const url = `http://localhost:8080/addProduct`;
+        const url = `https://safe-gorge-00308.herokuapp.com/addProduct`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -51,7 +51,7 @@ const AddProducts = () => {
             <div class="sidenav">
                 <Link class="nav-link text-white" aria-current="page" to="/manageProduct">Manage Product</Link>
                 <Link class="nav-link text-white" aria-current="page" to="/admin">Add Product</Link>
-                <Link class="nav-link text-white" aria-current="page" to="/edit">Edit Product</Link>
+                <Link class="nav-link text-white" aria-current="page" to="/home">Home</Link>
             </div>
 
             <div class="main border border-success shadow-sm p-3 mb-5 bg-body rounded" style={{marginLeft:'40%',marginTop:'10%',width:'500px'}}>

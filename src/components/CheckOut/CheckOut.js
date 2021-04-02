@@ -6,8 +6,9 @@ const CheckOut = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState([]);
 
+
   useEffect(() => {
-    fetch(`http://localhost:8080/product/${productId}`)
+    fetch(`https://safe-gorge-00308.herokuapp.com/product/${productId}`)
       .then(res => res.json())
       .then(data => setProduct(data));
   }, [])

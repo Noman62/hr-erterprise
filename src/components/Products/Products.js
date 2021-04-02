@@ -8,7 +8,7 @@ const Products = (props) => {
         history.push(`/checkOut/${productId}`);
     }
     return (
-        <div class="card mt-3" style={{ width: '18rem', marginLeft: '20px', backgroundColor: '#FFFFFF' }}>
+        <div class="card mt-3" style={{ width: '18rem', marginLeft: '20px', backgroundColor: '#8EE4AF' }}>
             <img style={{ height: '300px' }} src={imageURL} alt="" />
             <div class="card-body">
                 

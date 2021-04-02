@@ -5,8 +5,8 @@ import { UserContext } from '../../App';
 const Header = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
     return (
-        <div >
-        <nav class="navbar navbar-light bg-info">
+        <div style={{backgroundColor:'#5cdb95'}}>
+        <nav class="navbar navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand">HR ENTERPRISE</a>
                 <div class="d-flex">
@@ -16,8 +16,7 @@ const Header = () => {
                         <Link class="nav-link text-dark" aria-current="page" to="/order">Orders</Link>
                         <Link class="nav-link text-dark" aria-current="page" to="/admin">Admin</Link>
                         <Link class="nav-link text-dark" aria-current="page" to="/deal">Deals</Link>
-                        <button type="button" class="btn btn-warning">
-                        <Link class="nav-link text-dark" aria-current="page" to="/login">Login</Link></button>
+                        <Link class="nav-link text-dark" aria-current="page" to="/login">Login</Link>
                         <p>{loggedInUser.displayName}</p>
                         
                     
