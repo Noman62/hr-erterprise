@@ -22,7 +22,7 @@ function App() {
       <p>Name:{loggedInUser.displayName}</p>
       <Router>
       <Switch>
-        <Route path="/home">
+        <Route  path="/home">
           <Home/>
         </Route>
         <Route path="/admin">
