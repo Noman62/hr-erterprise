@@ -12,38 +12,42 @@ import Home from "./components/Home/Home";
 import CheckOut from "./components/CheckOut/CheckOut";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Orders from "./components/Orders/Orders";
+import OrderDetails from "./components/OrderDetails/OrderDetails";
 
-export const UserContext=createContext();
+export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser,setLoggedInUser]=useState({})
+  const [loggedInUser, setLoggedInUser] = useState({})
   return (
-    <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-      <Switch>
-        <Route  path="/home">
-          <Home/>
-        </Route>
-        <Route path="/admin">
-          <AddProducts />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <PrivateRoute path="/checkOut/:productId">
-          <CheckOut />
-        </PrivateRoute>
-        <Route path="/order/:orderId">
-        <Orders/>
-        </Route>
-        <Route path="/manageProduct">
-          <ManageProduct />
-        </Route>
-        <Route exact path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/admin">
+            <AddProducts />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <PrivateRoute path="/checkOut/:productId">
+            <CheckOut />
+          </PrivateRoute>
+          <PrivateRoute path="/orderDetail/:orderId">
+            <OrderDetails />
+          </PrivateRoute>
+          <Route path="/order">
+            <Orders/>
+          </Route>
+          <Route path="/manageProduct">
+            <ManageProduct />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </UserContext.Provider>
   );
 }

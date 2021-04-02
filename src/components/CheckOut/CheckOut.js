@@ -15,7 +15,7 @@ const CheckOut = () => {
 
   let history = useHistory();
   const handleCheckOut = (orderId) => {
-    history.push(`/order/${orderId}`);
+    history.push(`/orderDetail/${orderId}`);
   }
 
   return (
