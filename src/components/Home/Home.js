@@ -16,30 +16,29 @@ const useStyle = makeStyles((theme) => ({
 }));
 
 const Home = () => {
-    const [products,setProducts]=useState([]);
-    const classes =useStyle();
-    useEffect(()=>{
- fetch('http://localhost:8080/products')
- .then(res=>res.json())
- .then(data=>setProducts(data))
-    },[])
+    const [products, setProducts] = useState([]);
+    const classes = useStyle();
+    useEffect(() => {
+        fetch('http://localhost:8080/products')
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [])
     return (
         <div>
-        <Header/>
-        
-          <main className={classes.root} style={{backgroundColor:'#FFFFFF' }} >
-          <Container className={classes.containerRoot} maxWidth="md" >
-              <Grid container spacing={3} justify="center">
-                  {
-                     products.length===0 &&    <CircularProgress />
-                  }
-                  {
-                      products.map(product=><Products id={product._id} product={product}></Products>)
-                  }
-              </Grid>
-          </Container>
-      </main>
-      </div>
+            <Header/>
+            <main className={classes.root} style={{ backgroundColor: '#FFFFFF' }} >
+                <Container className={classes.containerRoot} maxWidth="md" >
+                    <Grid container spacing={3} justify="center">
+                        {
+                            products.length === 0 && <CircularProgress />
+                        }
+                        {
+                            products.map(product => <Products id={product._id} product={product}></Products>)
+                        }
+                    </Grid>
+                </Container>
+            </main>
+        </div>
     );
 };
 

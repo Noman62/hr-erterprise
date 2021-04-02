@@ -54,13 +54,13 @@ const AddProducts = () => {
                 <Link class="nav-link text-white" aria-current="page" to="/edit">Edit Product</Link>
             </div>
 
-            <div class="main">
+            <div class="main border border-success shadow-sm p-3 mb-5 bg-body rounded" style={{marginLeft:'40%',marginTop:'10%',width:'500px'}}>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input name="name" defaultValue="name" ref={register} />
+                    <input name="name" defaultValue="" placeholder="Enter Product Name" ref={register} />
                     <br />
-                    <input name="price" defaultValue="Enter price" ref={register} />
+                    <input name="price" defaultValue="" placeholder="Enter Product price" ref={register} />
                     <br />
-                    <input name="weight" defaultValue="Enter Weight" ref={register} />
+                    <input name="weight" defaultValue="" placeholder="Enter Product weight" ref={register} />
                     <br />
                     <input name="exampleRequired" type="file" onChange={handleImageUpload} />
                     <br />
