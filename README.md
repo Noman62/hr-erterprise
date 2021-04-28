@@ -1,9 +1,8 @@
 # HR ENTERPRISE
 
-##Introduction
-#### HR ENTERPRISE are very useful to users from the very first visit in browser tab,no install required,it loads quickly,It is a big news that for sports fans that anyone can to know any team lik detailes visiting tackle team app,
-
-## Trusted Riderrs feature:
-##### It is a responsive app fits for any form like desktop mobile tablet etc..I am using different feature in this app,One of them react router,,All component are linked using  react router,,I’m material UI And react boostrap,
+##Features:
+#### A single page Online super shop app where people are able to select any item  in their cart and checkout the cart with their information .
+####Technology for front-end: HTML5, CSS3, Bootstrap4, React.js,firebase Auth.
+####Technology for back-end: MongoDB, Node.js, Express.js.
 
 ##Live Site:-https://hr-erterprise.web.app/
