@@ -26,7 +26,7 @@ const Home = () => {
     return (
         <div>
             <Header/>
-            <main className={classes.root} style={{ backgroundColor: '#5cdb95' }} >
+            <main className={classes.root} style={{ backgroundColor: '#37966F' }} >
                 <Container className={classes.containerRoot} maxWidth="md" >
                     <Grid container spacing={3} justify="center">
                         {
