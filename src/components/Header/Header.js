@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Header.css';
@@ -10,7 +11,7 @@ const Header = () => {
         <div style={{backgroundColor:'#37966F'}}>
         <nav class="navbar navbar-light">
             <div class="container-fluid">
-            <img style={{height:'180px',width:'180px'}} src={logo} alt=""/>
+            <img style={{width:'12%'}} src={logo} alt=""/>
                 <div class="d-flex">
                     <nav class="nav">
                       
