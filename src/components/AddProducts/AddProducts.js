@@ -48,24 +48,24 @@ const AddProducts = () => {
     return (
 
         <div>
-            <div class="sidenav">
-                <Link class="nav-link text-white" aria-current="page" to="/manageProduct">Manage Product</Link>
-                <Link class="nav-link text-white" aria-current="page" to="/admin">Add Product</Link>
-                <Link class="nav-link text-white" aria-current="page" to="/home">Home</Link>
+            <div className="sidenav">
+                <Link className="nav-link text-white" aria-current="page" to="/manageProduct">Manage Product</Link>
+                <Link className="nav-link text-white" aria-current="page" to="/admin">Add Product</Link>
+                <Link className="nav-link text-white" aria-current="page" to="/home">Home</Link>
             </div>
 
-            <div class="main border border-success shadow-sm p-3 mb-5 bg-body rounded" style={{marginLeft:'40%',marginTop:'10%',width:'500px'}}>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <input name="name" defaultValue="" placeholder="Enter Product Name" ref={register} />
+            <div className="shadow p-3 mb-5 bg-body rounded" style={{marginLeft:'40%',marginTop:'5%',width:'400px',backgroundColor:'#2C5F2DFF'}}>
+                <form style={{marginLeft:'5%'}}  onSubmit={handleSubmit(onSubmit)}>
+                    <input className="mb-2 btn-lg btn-block rounded-pill"  name="name" defaultValue="" placeholder="Enter Product Name" ref={register} />
                     <br />
-                    <input name="price" defaultValue="" placeholder="Enter Product price" ref={register} />
+                    <input className="mb-2 btn-lg btn-block rounded-pill" name="price" defaultValue="" placeholder="Enter Product price" ref={register} />
                     <br />
-                    <input name="weight" defaultValue="" placeholder="Enter Product weight" ref={register} />
+                    <input className="mb-2 btn-lg btn-block rounded-pill" name="weight" defaultValue="" placeholder="Enter Product weight" ref={register} />
                     <br />
-                    <input name="exampleRequired" type="file" onChange={handleImageUpload} />
+                    <input className="mb-2 btn-lg btn-block " name="exampleRequired" type="file" onChange={handleImageUpload} />
                     <br />
                     {errors.exampleRequired && <span>This field is required</span>}
-                    <input type="submit" />
+                    <input className="rounded-pill btn-lg btn-block btn btn-success" type="submit" />
                 </form>
             </div>
         </div>

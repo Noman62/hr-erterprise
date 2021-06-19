@@ -63,9 +63,10 @@ const Login = () => {
                     <h2>Sign in</h2>
                     <p className="hint-text">Sign in with your social media account</p>
                     <div className="d-flex justify-content-center align-items-center ">
-                        <a style={{backgroundColor:'#507cc0',color:'#fff'}} href="#" className="btn border border-2 rounded-circle btn-lg mr-2 " title="Facebook"><i className="fa fa-facebook"></i></a>
-                        <a style={{backgroundColor:'#64ccf1',color:'#fff'}} href="#" className="btn border border-2 rounded-circle  btn-lg mr-2" title="Twitter"><i className="fa fa-twitter"></i></a>
-                        <a style={{backgroundColor:'#df4930',color:'#fff'}} href="#" className="btn border border-2 rounded-circle btn-lg" title="Google"><i className="fa fa-google"></i></a>
+                    <a style={{backgroundColor:'#df4930',color:'#fff'}} href="#" className="btn border border-2 rounded-circle btn-lg mr-2" title="Google" onClick={handleGoogleSignIn}><i className="fa fa-google"></i></a>
+                        <a style={{backgroundColor:'#507cc0',color:'#fff'}}  className="btn border border-2 rounded-circle btn-lg mr-2 " title="Facebook" onClick={handleFbSignIn}><i className="fa fa-facebook"></i></a>
+                        <a style={{backgroundColor:'#64ccf1',color:'#fff'}}  className="btn border border-2 rounded-circle  btn-lg " title="Twitter"><i className="fa fa-twitter"></i></a>
+                        
                     </div>
                     <div className="or-seperator"><b>or</b></div>
                     <div className="form-group">

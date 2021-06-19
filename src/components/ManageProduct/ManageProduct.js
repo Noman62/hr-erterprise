@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory'
+import createHistory from 'history/createBrowserHistory';
+import './ManageProduct.css';
 
 
 const ManageProduct = () => {
@@ -29,21 +30,21 @@ const ManageProduct = () => {
     return (
         <div>
 
-            <div class="sidenav">
-                <Link class="nav-link text-white" aria-current="page" to="/manageProduct">Manage Product</Link>
-                <Link class="nav-link text-white" aria-current="page" to="/admin">Add Product</Link>
-                <Link class="nav-link text-white" aria-current="page" to="/home">Home</Link>
+            <div className="sidenav">
+                <Link className="nav-link text-white" aria-current="page" to="/manageProduct">Manage Product</Link>
+                <Link className="nav-link text-white" aria-current="page" to="/admin">Add Product</Link>
+                <Link className="nav-link text-white" aria-current="page" to="/home">Home</Link>
             </div>
 
-            <div class="main">
-                <table class="table border shadow">
-                    <thead class="thead-dark">
+            <div className="main">
+                <table className="table border shadow">
+                    <thead style={{backgroundColor:'#2C5F2DFF'}}>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            <th scope="col">Action</th>
+                            <th className="text-white" scope="col">#</th>
+                            <th className="text-white" scope="col">First</th>
+                            <th className="text-white" scope="col">Last</th>
+                            <th className="text-white" scope="col">Handle</th>
+                            <th className="text-white" scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,8 +55,8 @@ const ManageProduct = () => {
                                 <td>{product.weight}</td>
                                 <td>{product.price}</td>
                                 <td>
-                                    <button class="btn btn-outline-primary mr-2">Edit</button>
-                                    <button onClick={() => handleDelete(product._id)} class="btn btn-danger mr-2">Delete</button>
+                                    <button className="btn btn-outline-primary bg-warning mr-2">Edit</button>
+                                    <button onClick={() => handleDelete(product._id)} className="btn btn-danger mr-2">Delete</button>
 
                                 </td>
                             </tr>

@@ -16,9 +16,9 @@ const Header = () => {
                     <nav class="nav">
                       
                         <Link class="nav-link text-dark nav-hover font-weight-bold" aria-current="page" to="/home">Home</Link>
-                        <Link class="nav-link text-dark nav-hover font-weight-bold" aria-current="page" to="/order">Orders</Link>
+                        {/* <Link class="nav-link text-dark nav-hover font-weight-bold" aria-current="page" to="/order">Orders</Link> */}
                         <Link class="nav-link text-dark nav-hover font-weight-bold" aria-current="page" to="/admin">Admin</Link>
-                        <Link class="nav-link text-dark nav-hover font-weight-bold" aria-current="page" to="/deal">Deals</Link>
+                        <Link class="nav-link text-dark nav-hover font-weight-bold" aria-current="page" to="/contactUs">Contact Us</Link>
                         <Link class="nav-link text-dark nav-hover font-weight-bold" aria-current="page" to="/login">Login</Link>
                         <p>{loggedInUser.displayName}</p>
                         

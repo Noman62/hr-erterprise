@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./components/Home/Home";
 import CheckOut from "./components/CheckOut/CheckOut";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Orders from "./components/Orders/Orders";
+import ContactUs from "./components/ContactUs/ContactUs";
 import OrderDetails from "./components/OrderDetails/OrderDetails";
 import SignUp from "./components/SignUp/SignUp";
 
@@ -29,6 +29,9 @@ function App() {
           <Route path="/admin">
             <AddProducts />
           </Route>
+          <Route path="/contactUs">
+            <ContactUs/>
+          </Route>
           <Route path="/login">
             <Login />
           </Route>
@@ -41,9 +44,6 @@ function App() {
           <PrivateRoute path="/orderDetail/:orderId">
             <OrderDetails />
           </PrivateRoute>
-          <Route path="/order">
-            <Orders/>
-          </Route>
           <Route path="/manageProduct">
             <ManageProduct />
           </Route>
