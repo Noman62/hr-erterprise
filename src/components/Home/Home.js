@@ -19,7 +19,7 @@ const Home = () => {
     const [products, setProducts] = useState([]);
     const classes = useStyle();
     useEffect(() => {
-        fetch('https://safe-gorge-00308.herokuapp.com/products')
+        fetch('https://afternoon-wildwood-57632.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

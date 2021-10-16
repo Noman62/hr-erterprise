@@ -17,7 +17,7 @@ const AddProducts = () => {
             imageURL: imageURL
         };
 
-        const url = `https://safe-gorge-00308.herokuapp.com/addProduct`;
+        const url = `https://afternoon-wildwood-57632.herokuapp.com/addProduct`;
         fetch(url, {
             method: 'POST',
             headers: {

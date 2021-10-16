@@ -8,7 +8,7 @@ const OrderDetails = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`https://safe-gorge-00308.herokuapp.com/product/${orderId}`)
+        fetch(`https://afternoon-wildwood-57632.herokuapp.com/product/${orderId}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
@@ -18,7 +18,7 @@ const OrderDetails = () => {
     const onSubmit = data => {
     
         const orderDetails = { ...loggedInUser, shipment: data,order:orders, orderTime: new Date() }
-        fetch('https://safe-gorge-00308.herokuapp.com/addOrder', {
+        fetch('https://afternoon-wildwood-57632.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

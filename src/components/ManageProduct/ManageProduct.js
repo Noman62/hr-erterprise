@@ -7,7 +7,7 @@ import './ManageProduct.css';
 const ManageProduct = () => {
     const [manageProduct, setManageProduct] = useState([]);
     useEffect(() => {
-        fetch('https://safe-gorge-00308.herokuapp.com/products')
+        fetch('https://afternoon-wildwood-57632.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setManageProduct(data))
     }, [])
@@ -15,7 +15,7 @@ const ManageProduct = () => {
    
 
     const handleDelete = (id) => {
-        fetch(`https://safe-gorge-00308.herokuapp.com/delete/${id}`, {
+        fetch(`https://afternoon-wildwood-57632.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
